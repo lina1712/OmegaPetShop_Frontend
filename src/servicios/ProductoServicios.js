@@ -3,27 +3,27 @@ import axios from "axios";
 const ProductoServicios = {};
 
 ProductoServicios.listarProducto = () => {
-    return axios.get("http://localhost:3080/api/productos");
+    return axios.get("https://lomegapetshopapi.herokuapp.com/api/productos");
 }
 
 ProductoServicios.buscarProductos = (criterio) => {
-    return axios.get("http://localhost:3080/api/productos?q="+criterio);
+    return axios.get("https://lomegapetshopapi.herokuapp.com/api/productos?q="+criterio);
 }
 
 ProductoServicios.buscarProducto = (id) => {
-    return axios.get("http://localhost:3080/api/productos/"+id);
+    return axios.get("https://lomegapetshopapi.herokuapp.com/api/productos/"+id);
 }
 
 ProductoServicios.guardarProducto = (producto) => {
-    return axios.post("http://localhost:3080/api/productos", producto);
+    return axios.post("https://lomegapetshopapi.herokuapp.com/api/productos", producto);
 }
 
 ProductoServicios.modificarProducto = (id, producto) => {
-    return axios.put("http://localhost:3080/api/productos/"+id, producto);
+    return axios.put("https://lomegapetshopapi.herokuapp.com/api/productos/"+id, producto);
 }
 
 ProductoServicios.borrarProducto = (id) => {
-    return axios.delete("http://localhost:3080/api/productos/"+id);
+    return axios.delete("https://lomegapetshopapi.herokuapp.com/api/productos/"+id);
 }
 
 export default ProductoServicios;

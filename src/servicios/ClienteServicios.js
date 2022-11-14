@@ -3,27 +3,27 @@ import axios from "axios";
 const ClienteServicios = {};
 
 ClienteServicios.listarCliente = () => {
-    return axios.get("http://localhost:3080/api/clientes");
+    return axios.get("https://lomegapetshopapi.herokuapp.com/api/clientes");
 }
 
 ClienteServicios.buscarClientes = (criterio) => {
-    return axios.get("http://localhost:3080/api/clientes?q="+criterio);
+    return axios.get("https://lomegapetshopapi.herokuapp.com/api/clientes?q="+criterio);
 }
 
 ClienteServicios.buscarCliente = (id) => {
-    return axios.get("http://localhost:3080/api/clientes/"+id);
+    return axios.get("https://lomegapetshopapi.herokuapp.com/api/clientes/"+id);
 }
 
 ClienteServicios.guardarCliente = (cliente) => {
-    return axios.post("http://localhost:3080/api/clientes", cliente);
+    return axios.post("https://lomegapetshopapi.herokuapp.com/api/clientes", cliente);
 }
 
 ClienteServicios.modificarCliente = (id, cliente) => {
-    return axios.put("http://localhost:3080/api/clientes"+id, cliente);
+    return axios.put("https://lomegapetshopapi.herokuapp.com/api/clientes"+id, cliente);
 }
 
 ClienteServicios.borrarCliente = (id) => {
-    return axios.delete("http://localhost:3080/api/clientes/"+id);
+    return axios.delete("https://lomegapetshopapi.herokuapp.com/api/clientes/"+id);
 }
 
 export default ClienteServicios;
